@@ -1,0 +1,57 @@
+.test-wrapper {
+  display: flex;
+  justify-content: space-evenly;
+  position: absolute;
+}
+
+.test-button {
+  background: blue;
+  flex-grow: 5;
+  background: #BFBFBF;
+  color: #3D3D3D;
+  border-radius: 5em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  border-width: 1px;
+  border-style: solid;
+}
+
+.test-gap {
+  flex-grow: 2;
+}
+
+@media all and (orientation:portrait) {
+  .test-wrapper {
+    width: 75vw;
+    height: 5vw;
+    left: 12.5vw;
+    top: calc((100vh - 75vw) / 2 + 75vw + 2.5vw);
+  }
+
+  .test-button {
+    font-size: 2.5vw;
+  }
+}
+
+@media all and (orientation:landscape) {
+  .test-wrapper {
+    width: 75vh;
+    height: 5vh;
+    left: calc((100vw - 75vh) / 2);
+    top: calc(12.5vh + 75vh + 2.5vh);
+  }
+
+  .test-button {
+    font-size: 2.5vh;
+  }
+}
+
+.focus, .test-button:active {
+  background: #3D3D3D;
+  color: #BFBFBF;
+  border-color: #BFBFBF;
+  border-width: 1px;
+  border-style: solid;
+}

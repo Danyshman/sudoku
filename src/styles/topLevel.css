@@ -1,0 +1,43 @@
+body {
+  background: #3D3D3D;
+  color: #BFBFBF;
+  position: relative;
+  font-family: Lato;
+  user-select: none;
+}
+
+h1 {
+  width: 100%;
+  text-align: center;
+}
+
+.parent {
+  position: absolute;
+  outline: none;
+}
+
+@media all and (orientation:portrait) {
+  h1 {
+    font-size: 5vw;
+  }
+
+  .parent {
+    width: 75vw;
+    height: 75vw;
+    top: calc((100vh - 75vw) / 2);
+    left: 12.5vw;
+  }
+}
+
+@media all and (orientation:landscape) {
+  h1 {
+    font-size: 5vh;
+  }
+
+  .parent {
+    width: 75vh;
+    height: 75vh;
+    top: 12.5vh;
+    left: calc((100vw - 75vh) / 2);
+  }
+}
